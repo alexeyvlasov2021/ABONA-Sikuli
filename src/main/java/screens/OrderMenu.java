@@ -12,9 +12,10 @@ public class OrderMenu extends MainWindow{
         super(screen);
     }
 
-    public void openOrders() throws FindFailed {
+    public void openOrders() throws FindFailed, InterruptedException {
         screen.wait(orderMenu,30.0);
         screen.click(orderMenu);
+        Thread.sleep(500);
     }
 
     public void openTransportOrders() throws FindFailed {

@@ -31,10 +31,10 @@ public class TransportOrdersTest {
         to.waitTransportOrder();
         to.selectCustomer("32114");
         to.clickAdd();
-//        nd.waitNewDocumentForm();
-//        nd.completeNewDocumentWindow();
-//        ne.waitNewEditWindow();
-//        ne.competeNewEditWindow();
+        nd.waitNewDocumentForm();
+        nd.completeNewDocumentWindow();
+        ne.waitNewEditWindow();
+        ne.competeNewEditWindow();
 
 //        GoodsAssignment ga = new GoodsAssignment(new Screen());
 //        ga.waitGoodsAssignmentWindow();

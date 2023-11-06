@@ -18,8 +18,9 @@ public class NewEdit extends MainWindow{
     private Pattern freight_fld = new Pattern(newEditScreens+"freight_fld.png");
     public Pattern ok_btn2 = new Pattern(newEditScreens+"ok_btn2.png");
 
-    public void waitNewEditWindow() throws FindFailed {
-        screen.wait(new_edit_hdr,30.0);
+    public void waitNewEditWindow() throws FindFailed, InterruptedException {
+        Thread.sleep(3000);
+//        screen.wait(freight_fld,30.0);
     }
 
     public void selectFreight() throws FindFailed {
