@@ -13,7 +13,7 @@ public class TransportOrders extends MainWindow{
     private Pattern add_loading_point_btn = new Pattern(transportOrderScreens+"add_loading_point_btn.png");
 
     public void waitTransportOrder() throws FindFailed {
-        screen.wait(transport_orders_controls,10.0);
+        screen.wait(transport_orders_controls,30.0);
     }
     public void openQuickSearchList() throws FindFailed {
         Region r = screen.find(quick_search_mnu);
@@ -25,7 +25,7 @@ public class TransportOrders extends MainWindow{
     }
     public void selectQuickSearchField() throws FindFailed {
         Region r = screen.find(quick_search_mnu);
-        screen.click(r.offset(195,0));
+        screen.click(r.offset(235,0));
     }
 
     public void enterCustomerNo(String number) throws InterruptedException {

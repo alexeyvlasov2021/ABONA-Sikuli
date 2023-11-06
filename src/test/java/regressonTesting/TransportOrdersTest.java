@@ -12,31 +12,35 @@ public class TransportOrdersTest {
     @Test
     static void test() throws InterruptedException, FindFailed {
 
-        Settings.MoveMouseDelay = 4;
+        Settings.MoveMouseDelay = 0;
         Settings.Highlight = true;
+//        Settings.MinSimilarity = 0.9;
         Screen s = new Screen();
 
         OrderMenu om = new OrderMenu(s);
         ConnectionWindow cw = new ConnectionWindow(s);
         TransportOrders to = new TransportOrders(s);
         NewDocument nd = new NewDocument(s);
+        NewEdit ne = new NewEdit(s);
 
         Thread.sleep(4000);
         cw.activateConnectionWindow();
-//        om.openOrders();
+        om.openOrders();
 ////        Thread.sleep(3000);
-//        om.openTransportOrders();
-//        to.waitTransportOrder();
-//        to.selectCustomer("32114");
-//        to.clickAdd();
+        om.openTransportOrders();
+        to.waitTransportOrder();
+        to.selectCustomer("32114");
+        to.clickAdd();
 //        nd.waitNewDocumentForm();
 //        nd.completeNewDocumentWindow();
+//        ne.waitNewEditWindow();
+//        ne.competeNewEditWindow();
 
-        GoodsAssignment ga = new GoodsAssignment(new Screen());
-        ga.waitGoodsAssignmentWindow();
+//        GoodsAssignment ga = new GoodsAssignment(new Screen());
+//        ga.waitGoodsAssignmentWindow();
+////
 //
-
-        ga.completeGoodsAssignmentWindow();
+//        ga.completeGoodsAssignmentWindow();
 
 
 

@@ -19,7 +19,7 @@ public class NewEdit extends MainWindow{
     public Pattern ok_btn2 = new Pattern(newEditScreens+"ok_btn2.png");
 
     public void waitNewEditWindow() throws FindFailed {
-        screen.wait(new_edit_hdr,10.0);
+        screen.wait(new_edit_hdr,30.0);
     }
 
     public void selectFreight() throws FindFailed {
