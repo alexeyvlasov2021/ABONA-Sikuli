@@ -73,7 +73,7 @@ public class GoodsAssignment extends MainWindow{
     public void completeGoodsAssignmentWindow() throws FindFailed, InterruptedException {
 
         TransportOrders to = new TransportOrders(screen);
-//        waitGoodsAssignmentWindow();
+        waitGoodsAssignmentWindow();
         chooseSelectedGoods();
         openAddressList();
 
@@ -90,7 +90,7 @@ public class GoodsAssignment extends MainWindow{
         selectLiferdatumFld();
         enterLiferdatum(Dates.getCurrentDate());
         applyGoodsAssignmentWindow();
-
+//
         to.clickAddLoadingPoint();
         waitGoodsAssignmentWindow();
         selectAction();

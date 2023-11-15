@@ -12,9 +12,10 @@ public class NewDocument extends MainWindow{
     private String newDocumentScreens = screensRootFolder+"\\new_document\\";
 
     private Pattern new_document_hdr = new Pattern(newDocumentScreens+"new_document_hdr.png");
-    private Pattern purchase_fld = new_document_hdr.targetOffset(20,126);
+    private Pattern purchase_fld = new Pattern(newDocumentScreens+"new_document_hdr.png").targetOffset(82, 113);
 
-    private Pattern ok_btn = new Pattern(newDocumentScreens+"ok_btn.png");
+    private Pattern ok_btn = new Pattern(newDocumentScreens+"new_document_hdr.png").targetOffset(520, 374);
+//            new Pattern(newDocumentScreens+"ok_btn.png");
 
     public void waitNewDocumentForm() throws FindFailed, InterruptedException {
         Thread.sleep(3000);

@@ -15,17 +15,20 @@ public class NewEdit extends MainWindow{
 
     private String newEditScreens = screensRootFolder+"\\new_edit\\";
     private Pattern new_edit_hdr = new Pattern(newEditScreens+"new_edit_hdr.png");
-    private Pattern freight_fld = new Pattern(newEditScreens+"freight_fld.png");
-    public Pattern ok_btn2 = new Pattern(newEditScreens+"ok_btn2.png");
+    private Pattern freight_fld = new Pattern(newEditScreens+"new_edit_hdr.png").targetOffset(134, 68);
+//            new Pattern(newEditScreens+"freight_fld.png");
+    public Pattern ok_btn2 = new Pattern(newEditScreens+"new_edit_hdr.png").targetOffset(470, 311);
+//        new Pattern(newEditScreens+"ok_btn2.png");
 
     public void waitNewEditWindow() throws FindFailed, InterruptedException {
         Thread.sleep(3000);
-//        screen.wait(freight_fld,30.0);
+        screen.wait(new_edit_hdr,30.0);
     }
 
     public void selectFreight() throws FindFailed {
-        var r = screen.find(freight_fld);
-        screen.click(r.offset(110,0));
+//        var r = screen.find(freight_fld);
+//        screen.click(r.offset(110,0));
+
 
     }
     public void enterFreight(String freight){
