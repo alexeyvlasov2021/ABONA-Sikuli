@@ -23,7 +23,8 @@ public class GoodsAssignment extends MainWindow{
     private Pattern action_fld = new Pattern(goodsAssignmentScreens+"action_fld.png");
     private Pattern ok_btn2 = new Pattern(goodsAssignmentScreens+"ok_btn2.png");
 
-    public void waitGoodsAssignmentWindow() throws FindFailed {
+    public void waitGoodsAssignmentWindow() throws FindFailed, InterruptedException {
+        Thread.sleep(2000);
         screen.wait(goods_assignment_hdr,10.0);
     }
 
@@ -67,7 +68,17 @@ public class GoodsAssignment extends MainWindow{
     }
 
     public void applyGoodsDistribution() throws FindFailed {
-        screen.click(ok_btn2);
+//        screen.click(ok_btn2);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.TAB);
+        screen.type(Key.ENTER);
+
     }
 
     public void completeGoodsAssignmentWindow() throws FindFailed, InterruptedException {

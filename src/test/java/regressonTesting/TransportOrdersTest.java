@@ -25,23 +25,23 @@ public class TransportOrdersTest {
 
         Thread.sleep(4000);
         cw.activateConnectionWindow();
-//        om.openOrders();
-//        om.openTransportOrders();
-//        to.waitTransportOrder();
-//        to.selectCustomer("32114");
-//        to.clickAdd();
-//        nd.waitNewDocumentForm();
-//        nd.completeNewDocumentWindow();
-//        ne.waitNewEditWindow();
-//        ne.competeNewEditWindow();
-//
+        om.openOrders();
+        om.openTransportOrders();
+        to.waitTransportOrder();
+        to.selectCustomer("32114");
+        to.clickAdd();
+        nd.waitNewDocumentForm();
+        nd.completeNewDocumentWindow();
+        ne.waitNewEditWindow();
+        ne.competeNewEditWindow();
+
         Goods g = new Goods(s);
         g.waitGoodsWindow();
         g.completeGoodsWindow();
 //
-//        GoodsAssignment ga = new GoodsAssignment(new Screen());
-//        ga.waitGoodsAssignmentWindow();
-//        ga.completeGoodsAssignmentWindow();
+        GoodsAssignment ga = new GoodsAssignment(new Screen());
+        ga.waitGoodsAssignmentWindow();
+        ga.completeGoodsAssignmentWindow();
 
 
 
