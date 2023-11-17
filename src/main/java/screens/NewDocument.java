@@ -1,6 +1,7 @@
 package screens;
 
 import org.sikuli.script.FindFailed;
+import org.sikuli.script.Key;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 
@@ -44,6 +45,7 @@ public class NewDocument extends MainWindow{
         enterPurchase();
         applyNewDocumentWindow();
     }
+
 
 //    public static void main(String[] args) throws FindFailed, InterruptedException {
 //        NewDocument nd = new NewDocument(new Screen());

@@ -15,6 +15,9 @@ public class TransportOrders extends MainWindow{
     private Pattern add_loading_point_btn = new Pattern(transportOrderScreens+"controls.png").targetOffset(-20, 347);
 //            new Pattern(transportOrderScreens+"add_loading_point_btn.png");
 
+    private Pattern exit_order_btn = new Pattern(transportOrderScreens+"controls.png").targetOffset(228, -27);
+    private Pattern save_btn = new Pattern(transportOrderScreens+"controls.png").targetOffset(28,0);
+//            new Pattern(transportOrderScreens+"save_btn.png");
     public void waitTransportOrder() throws FindFailed {
         screen.wait(transport_orders_controls,30.0);
     }
@@ -50,6 +53,18 @@ public class TransportOrders extends MainWindow{
 
     public void clickAddLoadingPoint() throws FindFailed {
         screen.click(add_loading_point_btn);
+    }
+
+    public void saveOrder() throws FindFailed {
+        screen.click(save_btn);
+    }
+
+    public void applySaving(){
+        screen.type(Key.ENTER);
+    }
+
+    public void closeOrder() throws FindFailed {
+        screen.click(exit_order_btn);
     }
 
 //    public static void main(String[] args) throws FindFailed, InterruptedException {

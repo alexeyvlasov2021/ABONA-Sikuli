@@ -15,8 +15,10 @@ public class GoodsAssignment extends MainWindow{
 
     private String goodsAssignmentScreens = screensRootFolder+"\\goods_asignment\\";
     private Pattern goods_assignment_hdr = new Pattern(goodsAssignmentScreens+"goodsAssignmentHDR.png");
-    private Pattern selectable_goods_txt = new Pattern(goodsAssignmentScreens+"selectable goods_txt.png");
-    private Pattern address_fld = new Pattern(goodsAssignmentScreens+"address_fld.png");
+//    private Pattern selectable_goods_txt = new Pattern(goodsAssignmentScreens+"selectable goods_txt.png");
+    private Pattern goods = new Pattern(goodsAssignmentScreens+"goodsAssignmentHDR.png").targetOffset(68, 177);
+    private Pattern address_fld = new Pattern(goodsAssignmentScreens+"goodsAssignmentHDR.png").targetOffset(743, 359);
+//            new Pattern(goodsAssignmentScreens+"address_fld.png");
     private Pattern kunden_reference_fld = new Pattern(goodsAssignmentScreens+"kunden_reference_fld.png");
     private Pattern liferdatum_fld = new Pattern(goodsAssignmentScreens+"liferdatum_fld.png");
     private Pattern ok_btn = new Pattern(goodsAssignmentScreens+"ok_btn.png");
@@ -29,16 +31,18 @@ public class GoodsAssignment extends MainWindow{
     }
 
     public void chooseSelectedGoods() throws FindFailed {
-        screen.doubleClick(selectable_goods_txt.targetOffset(13,69));
+//        screen.doubleClick(selectable_goods_txt.targetOffset(13,69));
+        screen.doubleClick(goods);
     }
 
     public void openAddressList() throws FindFailed {
-        screen.click(address_fld.targetOffset(719,0));
+        screen.click(address_fld);
     }
 
     public void selectKundenReferenceFld() throws FindFailed {
-        screen.hover(kunden_reference_fld);
-        screen.click(kunden_reference_fld.targetOffset(110,0));
+//        screen.hover(kunden_reference_fld);
+//        screen.click(kunden_reference_fld.targetOffset(110,0));
+        shiftCursorXtimes(10);
     }
 
     public void enterKundenReferenceFld(String kunden_reference){
@@ -46,7 +50,8 @@ public class GoodsAssignment extends MainWindow{
     }
 
     public void selectLiferdatumFld() throws FindFailed {
-        screen.click(liferdatum_fld.targetOffset(90,0));
+//        screen.click(liferdatum_fld.targetOffset(90,0));
+        shiftCursorXtimes(1);
     }
 
     public void enterLiferdatum(String date){
