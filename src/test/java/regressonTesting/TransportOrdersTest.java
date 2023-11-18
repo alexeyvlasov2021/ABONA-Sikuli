@@ -9,7 +9,7 @@ import org.sikuli.script.Screen;
 import utilities.Dates;
 
 public class TransportOrdersTest {
-    @Test(invocationCount = 1)
+    @Test(invocationCount = 3)
     static void test() throws InterruptedException, FindFailed {
 
         Settings.MoveMouseDelay = 3;
